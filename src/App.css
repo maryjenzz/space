@@ -1,0 +1,209 @@
+/* ====== Reset Básico ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ====== Cabeçalho ====== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ====== Seções ====== */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+p, li {
+    margin-bottom: 10px;
+}
+
+[data-theme="dark"] {
+    background: #111;
+    color: #eee;
+}
+
+
+/* ====== Lista ====== */
+ul {
+    list-style: disc inside;
+    margin-left: 15px;
+}
+
+/* ====== Carrossel ====== */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.card-planeta {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 10px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card-planeta img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin: 10px 0;
+}
+
+.planet-text {
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+    z-index: 10; /* garante que o botão fica acima dos cards */
+}
+
+.carousel-btn:hover {
+    background: #0055aa;
+}
+
+.prev-btn {
+    left: 10px; /* afasta da borda do card */
+}
+
+.next-btn {
+    right: 10px; /* afasta da borda do card */
+}
+
+
+/* ====== Rodapé ====== */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 1rem 1;
+    background: #003366;
+    color: white;
+    font-size: smaller;
+    border-radius: 8px;
+}
+
+/* ====== Dark Mode ====== */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark header h1 {
+    color: #66b2ff;
+}
+
+body.dark h2 {
+    color: #66aaff;
+}
+
+body.dark .card-planeta {
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
+
+body.dark footer {
+    background: #1e1e1e;
+    color: #aaa;
+}
+
+/* Container para o botão de tema fixo no canto */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Oculta o checkbox nativo */
+.toggle-checkbox {
+    display: none;
+}
+
+/* Estiliza o "trilho" do interruptor */
+.toggle-label {
+    display: block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estiliza o "círculo" do interruptor */
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Move o círculo quando o checkbox está "checked" */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #2196F3;
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+    transform: translateX(26px);
+}
