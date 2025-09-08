@@ -1,15 +1,3 @@
-# React + Vite
-
-Este projeto é um site sobre o universo, construído com React e Vite. Ele oferece uma experiência de carrossel de planetas e um modo escuro.
-
-## Sobre a Aplicação
-
-Este template fornece uma configuração mínima para fazer o React funcionar no Vite com HMR e algumas regras do ESLint.
-
-Atualmente, dois plugins oficiais estão disponíveis:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) usa [Babel](https://babeljs.io/) para Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) usa [SWC](https://swc.rs/) para Fast Refresh
 
 ## Como Baixar e Rodar o Projeto
 
