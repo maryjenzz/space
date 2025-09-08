@@ -40,7 +40,7 @@ function App() {
           />
           <label htmlFor="theme-switch" className="toggle-label"></label>
         </div>
-        
+
             <hr />
             <section id="introduction">
                 <h2>Introdução ao Universo</h2>
@@ -58,6 +58,8 @@ function App() {
             <hr />
 
             <Carousel />
+
+            <hr />
 
             <section id="elements">
                 <h2>Principais Elementos do Universo</h2>
