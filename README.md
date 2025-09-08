@@ -1,8 +1,6 @@
 
 ## Como Baixar e Rodar o Projeto
 
-Para começar a trabalhar neste projeto localmente, siga os passos abaixo.
-
 ### Pré-requisitos
 Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 
