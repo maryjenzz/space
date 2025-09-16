@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import PlanetCard from './PlanetCard';
+import { createPlanetCard } from '../factories/PlanetCardFactory';
 
 const planetsData = [
   {

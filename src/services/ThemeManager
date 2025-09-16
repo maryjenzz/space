@@ -1,0 +1,26 @@
+class ThemeManager {
+    constructor() {
+        // Garante que só uma instância da classe pode ser criada
+        if (ThemeManager.instance) {
+            return ThemeManager.instance;
+        }
+
+        this._theme = 'light';
+        ThemeManager.instance = this;
+    }
+
+    set theme(newTheme) {
+        this._theme = newTheme;
+        document.body.classList.toggle('dark', newTheme === 'dark');
+    }
+
+    get theme() {
+        return this._theme;
+    }
+
+    toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+    }
+}
+
+export const themeManager = new ThemeManager();

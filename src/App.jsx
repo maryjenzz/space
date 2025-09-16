@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Carousel from './components/Carousel';
+import { themeManager } from './services/ThemeManager';
+
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [currentTheme, setCurrentTheme] = useState(themeManager.theme);
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    themeManager.toggleTheme();
+    setCurrentTheme(themeManager.theme); // Atualiza o estado para re-renderizar
   };
 
-  // Este hook roda sempre que a variável 'theme' muda.
   useEffect(() => {
-    // Se o tema for 'dark', adiciona a classe 'dark' ao <body>.
-    if (theme === 'dark') {
-      document.body.classList.add('dark');
-    } else {
-      // Se não, remove a classe 'dark'.
-      document.body.classList.remove('dark');
-    }
-  }, [theme]); // O array de dependências garante que a função só roda quando o 'theme' muda.
+    document.body.classList.toggle('dark', currentTheme === 'dark');
+  }, [currentTheme]);
+
 
   return (
     <div className="container">
