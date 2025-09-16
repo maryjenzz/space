@@ -33,7 +33,7 @@ function App() {
             id="theme-switch"
             className="toggle-checkbox"
             onChange={toggleTheme}
-            checked={theme === 'dark'}
+            checked={currentTheme === 'dark'}
           />
           <label htmlFor="theme-switch" className="toggle-label"></label>
         </div>
